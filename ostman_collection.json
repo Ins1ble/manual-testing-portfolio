@@ -1,0 +1,62 @@
+{
+    "info": {
+        "name": "ShopExample API Tests",
+        "description": "Коллекция для проверки REST API интернет-магазина. Создана в рамках демонстрации навыков тестирования.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Posts",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://jsonplaceholder.typicode.com/posts",
+                    "protocol": "https",
+                    "host": ["jsonplaceholder", "typicode", "com"],
+                    "path": ["posts"]
+                }
+            }
+        },
+        {
+            "name": "Create Post",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "https://jsonplaceholder.typicode.com/posts",
+                    "protocol": "https",
+                    "host": ["jsonplaceholder", "typicode", "com"],
+                    "path": ["posts"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\":\"test\",\"body\":\"bar\",\"userId\":1}",
+                    "options": {"raw": {"language": "json"}}
+                }
+            }
+        },
+        {
+            "name": "Get Post by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://jsonplaceholder.typicode.com/posts/1",
+                    "protocol": "https",
+                    "host": ["jsonplaceholder", "typicode", "com"],
+                    "path": ["posts", "1"]
+                }
+            }
+        },
+        {
+            "name": "Delete Post",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "https://jsonplaceholder.typicode.com/posts/1",
+                    "protocol": "https",
+                    "host": ["jsonplaceholder", "typicode", "com"],
+                    "path": ["posts", "1"]
+                }
+            }
+        }
+    ]
+}
